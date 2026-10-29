@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Cine en Foco | Tu espacio de cine</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Hoja de estilos del proyecto -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="site-container">
+
+        <!-- Encabezado -->
+        <div class="site-header">
+
+            <a href="#inicio" aria-label="Ir al inicio">
+                <img
+                    src="images/logo-cine.svg"
+                    alt="Logotipo de Cine en Foco"
+                    class="site-logo"
+                >
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#destacados">Destacados</a>
+                <a href="#video">Videos</a>
+            </nav>
+
+        </div>
+
+        <!-- Contenido principal -->
+        <main id="inicio">
+
+            <!-- Sección de bienvenida -->
+            <section class="hero-section">
+
+                <div class="hero-content">
+                    <p class="eyebrow">BIENVENIDO A CINE EN FOCO</p>
+
+                    <h1>Historias que merecen ser vistas</h1>
+
+                    <p class="hero-description">
+                        Descubre películas, conoce nuevas historias y disfruta
+                        del mundo del cine desde un solo lugar.
+                    </p>
+
+                    <a href="#video" class="btn btn-warning">
+                        Ver video
+                    </a>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <div class="film-clapper">
+                        <div class="clapper-top"></div>
+                        <div class="clapper-body">
+                            <span> CINE </span>
+                            <span> EN </span>
+                            <span> FOCO </span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Sección de destacados -->
+            <section id="destacados" class="feature-section">
+
+                <div class="section-heading">
+                    <p class="eyebrow">NUESTRA SELECCIÓN</p>
+                    <h2>El cine para todos</h2>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon" aria-hidden="true">
+                                &#127916;
+                            </div>
+
+                            <h3>Grandes historias</h3>
+
+                            <p>
+                                Explora películas de diferentes géneros
+                                y encuentra una historia para cada ocasión.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon" aria-hidden="true">
+                                &#127909;
+                            </div>
+
+                            <h3>Contenido audiovisual</h3>
+
+                            <p>
+                                Disfruta de avances, recomendaciones y
+                                contenido relacionado con el séptimo arte.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-icon" aria-hidden="true">
+                                &#11088;
+                            </div>
+
+                            <h3>Nuevos descubrimientos</h3>
+
+                            <p>
+                                Encuentra propuestas cinematográficas
+                                y amplía tu lista de películas favoritas.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Sección de video -->
+            <section id="video" class="video-section">
+
+                <div class="section-heading">
+                    <p class="eyebrow">CONTENIDO DESTACADO</p>
+                    <h2>Disfruta el video</h2>
+
+                    <p>
+                        Reproduce el contenido directamente desde YouTube.
+                    </p>
+                </div>
+
+                <div class="video-card">
+
+                    <div class="video-screen">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/ScMzIvxBSi4"
+                            title="Video destacado de Cine en Foco"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+                        <div>
+                            <h3>Video destacado</h3>
+
+                            <p>
+                                Contenido audiovisual integrado desde
+                                la plataforma YouTube.
+                            </p>
+                        </div>
+
+                        <a
+                            href="https://www.youtube.com/results?search_query=trailers+oficiales+de+peliculas"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-outline-warning">
+                            Explorar videos
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="site-footer">
+
+            <div class="footer-brand">
+                <img
+                    src="images/logo-cine.svg"
+                    alt="Logotipo de Cine en Foco"
+                    class="footer-logo"
+                >
+
+                <p>
+                    Cine en Foco: un espacio para descubrir
+                    historias a través del cine.
+                </p>
+            </div>
+
+            <div class="footer-data">
+
+                <p>
+                    <strong>Curso:</strong>
+                    Conceptualización de servicios en la nube
+                </p>
+
+                <p>
+                    <strong>Nombre:</strong>
+                    Javier Hernández Hernández
+                </p>
+
+                <p>
+                    <strong>Código:</strong>
+                    225385187
+                </p>
+
+                <p>
+                    <strong>Correo:</strong>
+                    <a href="mailto:javier.hernandez8518@alumnos.udg.mx">
+                        javier.hernandez8518@alumnos.udg.mx
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 Cine en Foco. Proyecto académico.
+                </p>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- JavaScript de Bootstrap -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>

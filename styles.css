@@ -1,0 +1,613 @@
+
+/* =========================================
+   CINE EN FOCO
+   Hoja de estilos principal
+   Compatible con Bootstrap 5
+   ========================================= */
+
+/* Variables de diseño */
+:root {
+    --color-texto: #f8f4ec;
+    --color-secundario: #c2c4d0;
+    --color-acento: #f8c15c;
+    --color-acento-secundario: #f07845;
+    --color-panel: rgba(13, 17, 31, 0.86);
+}
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    color: var(--color-texto);
+    font-family: "Montserrat", Arial, sans-serif;
+    background-color: #0b0e19;
+
+    /* Imagen de fondo */
+    background-image:
+        linear-gradient(
+            rgba(8, 11, 21, 0.70),
+            rgba(8, 11, 21, 0.86)
+        ),
+        url("images/fondo-cine.svg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    color: inherit;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   Contiene todo el sitio web
+   ========================================= */
+
+.site-container {
+    width: min(1180px, calc(100% - 36px));
+    margin: 24px auto;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+
+    background: rgba(9, 12, 23, 0.72);
+
+    box-shadow: 0 24px 90px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(8px);
+}
+
+/* =========================================
+   ENCABEZADO
+   Logo a la izquierda y navegación a la derecha
+   ========================================= */
+
+.site-header {
+    min-height: 100px;
+    padding: 16px clamp(20px, 5vw, 62px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(8, 11, 21, 0.72);
+}
+
+/* Imagen del logo */
+.site-logo {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menú de navegación */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 3vw, 34px);
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-acento);
+}
+
+/* =========================================
+   PRESENTACIÓN PRINCIPAL
+   ========================================= */
+
+.hero-section {
+    min-height: 475px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 36px;
+
+    padding: 70px clamp(24px, 6vw, 76px);
+
+    background:
+        radial-gradient(
+            ellipse at 82% 48%,
+            rgba(240, 120, 69, 0.14),
+            transparent 42%
+        );
+}
+
+/* Texto pequeño destacado */
+.eyebrow {
+    color: var(--color-acento);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+/* Título principal */
+.hero-copy h1 {
+    margin: 18px 0;
+    font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.055em;
+}
+
+.hero-copy h1 span {
+    color: var(--color-acento);
+}
+
+/* Descripción */
+.hero-copy p {
+    max-width: 590px;
+    color: var(--color-secundario);
+    line-height: 1.8;
+}
+
+/* Botones */
+.btn-cinema {
+    margin-top: 14px;
+    padding: 13px 20px;
+
+    border: 0;
+    border-radius: 999px;
+
+    color: #17131a;
+    background: linear-gradient(
+        100deg,
+        var(--color-acento),
+        #ffdc8e
+    );
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    box-shadow: 0 8px 24px rgba(248, 193, 92, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn-cinema:hover {
+    color: #17131a;
+    background: #ffe2a0;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   ILUSTRACIÓN DECORATIVA DE CINE
+   ========================================= */
+
+.hero-art {
+    min-height: 290px;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+}
+
+.film-frame {
+    width: min(280px, 100%);
+
+    position: relative;
+
+    transform: rotate(5deg);
+
+    filter: drop-shadow(
+        0 25px 28px rgba(0, 0, 0, 0.35)
+    );
+}
+
+/* Parte superior de la claqueta */
+.clapper-top {
+    height: 48px;
+    padding: 7px 12px;
+
+    display: flex;
+    justify-content: space-around;
+
+    border-radius: 12px 12px 0 0;
+
+    background: repeating-linear-gradient(
+        135deg,
+        #f8c15c 0 18px,
+        #25273a 18px 36px
+    );
+}
+
+.clapper-top i {
+    width: 16px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Cuerpo de la claqueta */
+.clapper-body {
+    height: 190px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    border: 8px solid #f4e7d0;
+    border-radius: 0 0 15px 15px;
+
+    background: linear-gradient(
+        145deg,
+        #292e47,
+        #101321
+    );
+}
+
+.clapper-body span {
+    color: var(--color-acento);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+/* Triángulo decorativo */
+.play-triangle {
+    width: 0;
+    height: 0;
+
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 34px solid #f8f4ec;
+
+    margin-left: 8px;
+}
+
+/* Elementos decorativos circulares */
+.reel {
+    position: absolute;
+
+    width: 68px;
+    height: 68px;
+
+    border: 9px solid var(--color-acento-secundario);
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        #111626 0 8px,
+        var(--color-acento-secundario) 9px 13px,
+        transparent 14px
+    );
+}
+
+.reel-one {
+    left: -23px;
+    top: 115px;
+}
+
+.reel-two {
+    right: -20px;
+    top: 155px;
+
+    width: 48px;
+    height: 48px;
+
+    border-width: 6px;
+}
+
+/* Texto decorativo */
+.floating-note {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+
+    color: var(--color-acento);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+/* =========================================
+   SECCIÓN DESTACADA
+   ========================================= */
+
+.feature-section {
+    padding: 45px clamp(24px, 6vw, 76px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.feature-section h2,
+.section-heading h2 {
+    margin: 12px 0;
+    font-size: clamp(1.65rem, 3vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.feature-section > p,
+.section-heading p {
+    color: var(--color-secundario);
+    line-height: 1.8;
+}
+
+.feature-section > p {
+    margin: 0;
+}
+
+/* =========================================
+   SECCIÓN DE VIDEO
+   ========================================= */
+
+.video-section {
+    padding: 65px clamp(24px, 6vw, 76px) 75px;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading p {
+    margin-bottom: 0;
+}
+
+/* Tarjeta que contiene el reproductor */
+.video-card {
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 18px;
+
+    background: var(--color-panel);
+}
+
+/* Reproductor adaptable de YouTube */
+.video-screen {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    min-height: 0;
+    overflow: hidden;
+
+    background: #080b15;
+}
+
+/* El iframe ocupa todo el espacio del reproductor */
+.video-screen iframe {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+/* Información debajo del video */
+.video-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+
+    padding: 25px 28px;
+}
+
+.video-description h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.video-description p {
+    margin: 0;
+
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.video-description .btn {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   PIE DE PÁGINA
+   Datos de identificación académica
+   ========================================= */
+
+.site-footer {
+    padding: 38px clamp(24px, 6vw, 76px) 20px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 30px;
+
+    background: rgba(5, 7, 14, 0.86);
+}
+
+/* Marca del sitio */
+.footer-logo {
+    width: 160px;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-brand p {
+    margin-top: 12px;
+
+    color: var(--color-secundario);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+/* Datos del estudiante */
+.footer-data h2 {
+    margin: 0 0 15px;
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.footer-data p {
+    margin: 7px 0;
+
+    color: var(--color-secundario);
+    font-size: 0.8rem;
+    line-height: 1.65;
+
+    overflow-wrap: anywhere;
+}
+
+.footer-data strong {
+    color: var(--color-texto);
+}
+
+.footer-data a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+.footer-data a:hover {
+    text-decoration: underline;
+}
+
+/* Texto final del footer */
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    margin-top: 14px;
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    color: #8e91a1;
+    font-size: 0.72rem;
+    text-align: center;
+}
+
+/* =========================================
+   ADAPTACIÓN PARA TABLETAS Y CELULARES
+   ========================================= */
+
+@media (max-width: 760px) {
+
+    /* Contenedor principal */
+    .site-container {
+        width: calc(100% - 18px);
+        margin: 9px auto;
+        border-radius: 16px;
+    }
+
+    /* Encabezado */
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        padding: 18px 22px;
+    }
+
+    .site-logo {
+        width: 165px;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    /* Presentación */
+    .hero-section {
+        grid-template-columns: 1fr;
+
+        padding-top: 52px;
+        padding-bottom: 44px;
+
+        gap: 10px;
+    }
+
+    .hero-art {
+        min-height: 270px;
+    }
+
+    /* Secciones y footer */
+    .feature-section,
+    .site-footer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Video */
+    .video-description {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .video-description .btn {
+        align-self: flex-start;
+    }
+
+    .footer-bottom {
+        grid-column: auto;
+    }
+}
+
+/* =========================================
+   AJUSTES PARA PANTALLAS MUY PEQUEÑAS
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .hero-section,
+    .feature-section,
+    .video-section,
+    .site-footer {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-copy h1 {
+        font-size: 2.1rem;
+    }
+
+    .eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+    }
+
+    .video-description {
+        padding: 20px;
+    }
+}
